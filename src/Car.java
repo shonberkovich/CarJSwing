@@ -13,6 +13,10 @@ public class Car {
         this.visible = true;
     }
 
+    public boolean isVisible() {
+        return visible;
+    }
+
     public void paint (Graphics g) {
         if (this.visible) {
             g.setColor(Color.green);
@@ -37,39 +41,42 @@ public class Car {
                     BODY_WIDTH / 4,
                     BODY_WIDTH / 4);
         } else {
-            g.setColor(Color.RED);
-            g.fillRect(0, 0,1000, 1000);
+
         }
     }
 
     public void moveRight () {
-        this.x++;
+        this.x+=5;
     }
 
     public void moveLeft () {
-        this.x--;
+        this.x-=5;
     }
     public void moveUP () {
-        this.y--;
+        this.y-=5;
     }
 
     public void moveDown () {
-        this.y++;
+        this.y+=5;
     }
-    public void moveDiaganalUp () {
-        this.x++;
-        this.y--;
+    public void moveDiagonalUp() {
+        this.x+=5;
+        this.y-=5;
     }
 
     public void moveDiaganalDown () {
-        this.x--;
-        this.y++;
+        this.x-=5;
+        this.y+=5;
 
     }
 
 
 
-    public void explode () {
-        this.visible = false;
+    //public void explode () {
+        //this.visible = false;
+   // }
+    public void setVisible(boolean visible){
+        this.visible=visible;
     }
+
 }
